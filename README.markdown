@@ -17,7 +17,7 @@ WebDB
 (unless the params are otherwise noted to be [REQUIRED] in the reference section below)
 
 **REFERENCE**:
-init( [params] ) OR WebDB( [params] ) OR $DB( [params] ) OR CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties it to a SQLite DB instance
+*	init( [params] ) OR WebDB( [params] ) OR $DB( [params] ) OR CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties it to a SQLite DB instance
 		params ==> object containing the following options:
 			name				=>	name to assign to the Database instance
 			description	=>	brief description of the database's purpose
