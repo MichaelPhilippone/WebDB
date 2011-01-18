@@ -4,18 +4,17 @@
 ------------
 *DATE*: 2011-01-17
 ------------
-*PURPOSE*:  Provide a unified, SQL-like, OOP interface to the Client-side SQLite DB 
-									that is exposed by modern browsers
+*PURPOSE*:  Provide a unified, SQL-like, OOP interface to the Client-side SQLite DB that is exposed by modern browsers
 ------------
-*EXAMPLE*: initializing the database is simple, just provide an options object to the 
-	constructor, like so:
+*EXAMPLE*: initializing the database is simple, just provide an options object to the constructor, like so:
 `<script type="text/javascript">
 	var webdb = WebDB();
 	// OR
 	var webdb = $DB();
-</script>`
+</script>
+`
 ------------
-*REFERENCE*: `
+*REFERENCE*:`
 -------------------------------------------------------------------------------------------------
 +)	init( [params] ) OR WebDB( [params] ) OR $DB( [params] ) OR CREATE_DATABASE( [params] ) ==> 
 					initalizes an instance of the DB object and ties it to a SQLite DB instance
