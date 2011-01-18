@@ -7,11 +7,11 @@ WebDB
 **PURPOSE**:  Provide a unified, SQL-like, OOP interface to the Client-side SQLite DB that is exposed by modern browsers
 
 **EXAMPLE**: initializing the database is simple, just provide an options object to the constructor, like so:
-`<script type="text/javascript">`
-`var webdb = WebDB();`
-`// OR`
-`var webdb = $DB();`
-`</script>`
+`<script type="text/javascript">
+	var webdb = WebDB();
+	// OR
+	var webdb = $DB();
+</script>`
 
 **NOTE**: if no 'params' object is specified, the entire installation defaults to a schema for a To-Do list manager :) 
 	(unless otherwise noted to be [REQUIRED])
