@@ -26,8 +26,12 @@ REFERENCE:
 	*	description	=>	brief description of the database's purpose
 	*	size				=>	size (in Mb) to allocate for the db
 	*	version			=>	developer defined value of the DB version (to assist in live vs offline versioning)
-	*	onSuccess		=>	[optional] hander/callback for default behaviour after successful queries  (**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)
-	*	onError			=>	[optional] hander/callback for default behaviour after errors during operation  (**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)
+	*	onSuccess		=>	[optional] hander/callback for default behaviour after successful queries  
+(**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)  
+only available when calling a constructor or *init()*
+	*	onError			=>	[optional] hander/callback for default behaviour after errors during operation  
+(**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)  
+only available when calling a constructor or *init()*
 
 *	CREATE_TABLE( [params] )  => create a table according to parameters
 																	NOTE: since WebDB is all about simplicity, 
