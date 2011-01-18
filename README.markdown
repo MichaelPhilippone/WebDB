@@ -21,12 +21,11 @@ REFERENCE:
 -----------------
 
 *	init( [params] ) OR WebDB( [params] ) OR $DB( [params] ) OR CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties it to a SQLite DB instance
-	Parameters object may contain:
+	* **Parameters object may contain**:
 	*	name				=>	name to assign to the Database instance
 	*	description	=>	brief description of the database's purpose
 	*	size				=>	size (in Mb) to allocate for the db
-	*	version			=>	developer defined value of the DB version 
-										(to assist in live vs offline versioning)
+	*	version			=>	developer defined value of the DB version (to assist in live vs offline versioning)
 	*	onSuccess		=>	[optional] hander/callback for default behaviour after successful queries  (**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)
 	*	onError			=>	[optional] hander/callback for default behaviour after errors during operation  (**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)
 
