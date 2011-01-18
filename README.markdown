@@ -67,7 +67,10 @@ CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties
 	* **Parameters object may contain**:
 	* onSuccess	=>	[optional] optional override for global DB-success handler
 	* onError		=>	[optional] optional override for global DB-error handler
-	
+
+-------------------------------------
+## UNDER CONSTRUCTION
+
 *	SELECT( params ) => return rows as specified by the params:
 	* **Parameters object may contain**:
 	* STILL IN DEVELOPMENT
