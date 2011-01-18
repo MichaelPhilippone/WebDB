@@ -1,36 +1,21 @@
-<html>
-<body>
-<h1> WebDB </h1>
-
-<hr/>
-
-<b>AUTHOR</b>	: Michael Philippone
-
-<hr/>
-
-<b>DATE</b> 	: 2011-01-17
-
-<hr/>
-
-<b>PURPOSE</b>:  Provide a unified, SQL-like, OOP interface to the Client-side SQLite DB 
+# WebDB
+------------
+*AUTHOR*: Michael Philippone
+------------
+*DATE*: 2011-01-17
+------------
+*PURPOSE*:  Provide a unified, SQL-like, OOP interface to the Client-side SQLite DB 
 									that is exposed by modern browsers
-<hr/>
-
-<b>EXAMPLE</b>: initializing the database is simple, just provide an options object to the 
+------------
+*EXAMPLE*: initializing the database is simple, just provide an options object to the 
 	constructor, like so:
-
-<pre>
-<script type="text/javascript">
+`<script type="text/javascript">
 	var webdb = WebDB();
 	// OR
 	var webdb = $DB();
-</script>
-</pre>
-
-<hr/>
-
-<b>REFERENCE</b>:
-<pre>
+</script>`
+------------
+*REFERENCE*: `
 -------------------------------------------------------------------------------------------------
 +)	init( [params] ) OR WebDB( [params] ) OR $DB( [params] ) OR CREATE_DATABASE( [params] ) ==> 
 					initalizes an instance of the DB object and ties it to a SQLite DB instance
@@ -88,15 +73,9 @@
 +)	DELETE_ALL( params ) => delete ALL rows for table specified by the params:
 			Still in the works
 -------------------------------------------------------------------------------------------------
-</pre>
-
-<hr/>
-
-<b>NOTE</b>: if no 'params' object is specified, 
+`
+------------
+*NOTE*: if no 'params' object is specified, 
 		the entire installation defaults to a schema for a To-Do list manager :)
 	(unless otherwise noted to be [REQUIRED])
-
-<hr/>
-
-</body>
-</html>
+------------

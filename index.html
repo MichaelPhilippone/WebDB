@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>WebDB</title>
+    <style>
+    	table {
+    		border:1px solid #000000;
+    		border-collapse:collapse;
+    	}
+    	td {
+    		border:1px solid #000000;
+    		padding:0 5px 0 5px;
+    	}
+    	th {
+    		border:1px solid #000000;
+    		background-color:#909090;
+    		padding:5px;
+    	}
+    	.bg1 { background-color: #D0D0D0; }
+    	.bg0 {}
+    </style>
+	</head>
+  <body>
+    <h1>WebDB</h1>
+		
+		<!-- <div class="datetime"> Last updated: <script>document.write( Date() );</script> </div> -->
+    
+    <form onSubmit="return false;" id="toDoBForm">
+    	Due Date: <input type="text" size="20" id="newToDoDueDate" />
+  	  To Do: <input type="text" size="20" id="newToDoText" />
+	    <input type="submit" id="newToDoButton" value="Add Item"/>
+    </form>
+    
+    <hr/>
+    
+    <div id="output"></div>
+    
+    <hr/>
+    
+    <input type="button" id="DropDbBtn" value="Completely Erase Database (DROP DATABASE)" />
+    
+    <hr/>
+    
+<pre>
+TODO:
+ * make Documentation object for console-based research :)
+ * minify the whole she-bang
+ * automatic dHTML input input form (on a per table basis)
+ * -  wire the input form up to the URL
+ * - - - ie: localhost/index.html?WebDBForms=true&Table=todo would provide an input form for table "todo"
+ * SELECT, UPDATE, DELETE_ALL 
+</pre>
+    
+    
+    <script type="text/javascript" src="../LIB/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="js/ClientDB.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
