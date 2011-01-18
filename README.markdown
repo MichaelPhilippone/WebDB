@@ -62,6 +62,9 @@ CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties
 
 *	SELECT_ALL( params ) => return all rows for a given table:
 	* **Parameters object may contain**:
+	* table     =>  [REQUIRED] table we are querying for values
+	* onSuccess	=>	[optional] optional override for global DB-success handler
+	* onError		=>	[optional] optional override for global DB-error handler
 
 *	DROP_DATABASE( params ) => return all rows for a given table:
 	* **Parameters object may contain**:
