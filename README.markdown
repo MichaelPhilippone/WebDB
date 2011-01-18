@@ -44,7 +44,7 @@ CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties
 	* **Parameters object may contain**:
 	* table		=>	name of table to create
 	* columns	=> object containing mappings of column names and column data-types  
-	{ 'name':'text' , 'Birthday':'DATETIME' }
+		{ 'name':'text' , 'Birthday':'DATETIME' }
 
 *	DROP_TABLE( params ) => DROP a specified table
 		params => [REQUIRED] object containing following options:
