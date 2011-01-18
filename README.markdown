@@ -28,10 +28,10 @@ $DB( [params] )
 OR  
 CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties it to a SQLite DB instance
 	* **Parameters object may contain**:
-	*	name				=>	name to assign to the Database instance
-	*	description	=>	brief description of the database's purpose
-	*	size				=>	size (in Mb) to allocate for the db
-	*	version			=>	developer defined value of the DB version (to assist in live vs offline versioning)
+	*	name				=>	[REQUIRED] name to assign to the Database instance
+	*	description	=>	[REQUIRED] brief description of the database's purpose
+	*	size				=>	[REQUIRED] size (in Mb) to allocate for the db
+	*	version			=>	[REQUIRED] developer defined value of the DB version (to assist in live vs offline versioning)
 	*	onSuccess		=>	[optional] hander/callback for default behaviour after successful queries  
 (**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)  
 *only available when calling a constructor or* **init()**
@@ -42,21 +42,21 @@ CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties
 *	CREATE_TABLE( [params] )  => create a table according to parameters  
 *NOTE*: since WebDB is all about simplicity, don't worry about specifying PRIMARY KEY or Last-modified columns, WebDB takes care of them for you :-)
 	* **Parameters object may contain**:
-	* table		=>	name of table to create
-	* columns	=> object containing mappings of column names and column data-types  
+	* table		=>	[REQUIRED] name of table to create
+	* columns	=>  [REQUIRED] object containing mappings of column names and column data-types  
 		ie: { 'name':'text' , 'Birthday':'DATETIME' }
 
 *	DROP_TABLE( params ) => DROP a specified table
 	* **Parameters object may contain**:
-	* table 		=> 	table name to drop
+	* table 		=> 	[REQUIRED] table name to drop
 	* onSuccess	=>	[optional] optional override for global DB-success handler
 	* onError		=>	[optional] optional override for global DB-error handler
 
 *	INSERT( params ) => inserts values into a table
 	* **Parameters object may contain**:
-	* table	 		=> table into which we want to insert values
-	* columns 	=> array of names of columns
-	* values 		=> array of values to insert into columns (corresponds to 'columns' property)
+	* table	 		=>  [REQUIRED] table into which we want to insert values
+	* columns 	=>  [REQUIRED] array of names of columns
+	* values 		=>  [REQUIRED] array of values to insert into columns (corresponds to 'columns' property)
 	* onSuccess	=>	[optional] optional override for global DB-success handler
 	* onError		=>	[optional] optional override for global DB-error handler
 
@@ -66,7 +66,7 @@ CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties
 	* onSuccess	=>	[optional] optional override for global DB-success handler
 	* onError		=>	[optional] optional override for global DB-error handler
 
-*	DROP_DATABASE( params ) => return all rows for a given table:
+*	DROP_DATABASE( params ) => drops all tables for the WebDB instance:
 	* **Parameters object may contain**:
 	* onSuccess	=>	[optional] optional override for global DB-success handler
 	* onError		=>	[optional] optional override for global DB-error handler
