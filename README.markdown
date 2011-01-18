@@ -44,37 +44,44 @@ CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties
 	* **Parameters object may contain**:
 	* table		=>	name of table to create
 	* columns	=> object containing mappings of column names and column data-types  
-		{ 'name':'text' , 'Birthday':'DATETIME' }
+		ie: { 'name':'text' , 'Birthday':'DATETIME' }
 
 *	DROP_TABLE( params ) => DROP a specified table
-		params => [REQUIRED] object containing following options:
-			table 		=> 	table name to drop
-			onSuccess	=>	[optional] optional override for global DB-success handler
-			onError		=>	[optional] optional override for global DB-error handler
+	* **Parameters object may contain**:
+	* table 		=> 	table name to drop
+	* onSuccess	=>	[optional] optional override for global DB-success handler
+	* onError		=>	[optional] optional override for global DB-error handler
 
 *	INSERT( params ) => inserts values into a table
-		params => [REQUIRED] object containing data to insert according to:
-			table	 		=> table into which we want to insert values
-			columns 	=> array of names of columns
-			values 		=> array of values to insert into columns (corresponds to 'columns' property)
-			onSuccess	=> [optional] override for global DB-success handler
-				onError		=> [optional] override for global DB-error handler
-			last_mod	=> [optional] override for last_modified timestamp (BE CAREFUL!)
+	* **Parameters object may contain**:
+	* table	 		=> table into which we want to insert values
+	* columns 	=> array of names of columns
+	* values 		=> array of values to insert into columns (corresponds to 'columns' property)
+	* onSuccess	=>	[optional] optional override for global DB-success handler
+	* onError		=>	[optional] optional override for global DB-error handler
 
 *	SELECT_ALL( params ) => return all rows for a given table:
+	* **Parameters object may contain**:
 
 *	DROP_DATABASE( params ) => return all rows for a given table:
-
+	* **Parameters object may contain**:
+	* onSuccess	=>	[optional] optional override for global DB-success handler
+	* onError		=>	[optional] optional override for global DB-error handler
+	
 *	SELECT( params ) => return rows as specified by the params:
-			Still in the works
+	* **Parameters object may contain**:
+	* STILL IN DEVELOPMENT
 
 *	UPDATE( params ) => update rows specified by the params:
-			Still in the works
+	* **Parameters object may contain**:
+	* STILL IN DEVELOPMENT
 
 *	DELETE( params ) => update rows specified by the params:
-			Still in the works, though sort of functional
+	* **Parameters object may contain**:
+	* STILL IN DEVELOPMENT
 
 *	DELETE_ALL( params ) => delete ALL rows for table specified by the params:
-			Still in the works
+	* **Parameters object may contain**:
+	* STILL IN DEVELOPMENT
 
 
