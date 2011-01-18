@@ -14,10 +14,10 @@ WebDB
 	</script>
 
 **NOTE**: if no 'params' object is specified, the entire installation defaults to a schema for a To-Do list manager :)  
-(unless otherwise noted to be [REQUIRED])
+(unless the params are otherwise noted to be [REQUIRED] in the reference section below)
 
 **REFERENCE**:
-*	init( [params] ) OR WebDB( [params] ) OR $DB( [params] ) OR CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties it to a SQLite DB instance
+init( [params] ) OR WebDB( [params] ) OR $DB( [params] ) OR CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties it to a SQLite DB instance
 		params ==> object containing the following options:
 			name				=>	name to assign to the Database instance
 			description	=>	brief description of the database's purpose
@@ -31,7 +31,7 @@ WebDB
 			onError			=>	[optional] hander/callback for default behaviour after errors during operation
 											(NOTE: there is a default handler suppplied, but you REALLY SHOULD
 											specify your own to replace it)
----
+
 *	CREATE_TABLE( [params] )  => create a table according to parameters
 																	NOTE: since WebDB is all about simplicity, 
 																		don't worry about specifying PRIMARY KEY or Last-modified
@@ -40,13 +40,13 @@ WebDB
 			table		=>	name of table to create
 			columns	=> object containing mappings of column names and column data-types
 									ie: { 'name':'text' , 'Birthday':'DATETIME' }
----
+
 *	DROP_TABLE( params ) => DROP a specified table
 		params => [REQUIRED] object containing following options:
 			table 		=> 	table name to drop
 			onSuccess	=>	[optional] optional override for global DB-success handler
 			onError		=>	[optional] optional override for global DB-error handler
----
+
 *	INSERT( params ) => inserts values into a table
 		params => [REQUIRED] object containing data to insert according to:
 			table	 		=> table into which we want to insert values
@@ -55,21 +55,21 @@ WebDB
 			onSuccess	=> [optional] override for global DB-success handler
 				onError		=> [optional] override for global DB-error handler
 			last_mod	=> [optional] override for last_modified timestamp (BE CAREFUL!)
----
+
 *	SELECT_ALL( params ) => return all rows for a given table:
----
+
 *	DROP_DATABASE( params ) => return all rows for a given table:
----
+
 *	SELECT( params ) => return rows as specified by the params:
 			Still in the works
----
+
 *	UPDATE( params ) => update rows specified by the params:
 			Still in the works
----
+
 *	DELETE( params ) => update rows specified by the params:
 			Still in the works, though sort of functional
----
+
 *	DELETE_ALL( params ) => delete ALL rows for table specified by the params:
 			Still in the works
----
+
 
