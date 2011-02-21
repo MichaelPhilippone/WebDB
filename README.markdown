@@ -20,13 +20,6 @@ WebDB
 
 REFERENCE:  
 -----------------
-<ul>
-<li>123</li>
-<li>123</li>
-<li>123</li>
-<li>123</li>
-</ul>
-
 *	init( [params] )  
 OR  
 WebDB( [params] )  
@@ -35,11 +28,11 @@ $DB( [params] )
 OR  
 CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties it to a SQLite DB instance
 	* **params object may contain**:
-	*	name				=>	[REQUIRED] name to assign to the Database instance
-	*	description	=>	[REQUIRED] brief description of the database's purpose
-	*	size				=>	[REQUIRED] size (in Mb) to allocate for the db
-	*	version			=>	[REQUIRED] developer defined value of the DB version (to assist in live vs offline versioning)
-	*	onSuccess		=>	[optional] hander/callback for default behaviour after successful queries  
+		*	name				=>	[REQUIRED] name to assign to the Database instance
+		*	description	=>	[REQUIRED] brief description of the database's purpose
+		*	size				=>	[REQUIRED] size (in Mb) to allocate for the db
+		*	version			=>	[REQUIRED] developer defined value of the DB version (to assist in live vs offline versioning)
+		*	onSuccess		=>	[optional] hander/callback for default behaviour after successful queries  
 (**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)  
 *only available when calling a constructor or* **init()**
 	*	onError			=>	[optional] hander/callback for default behaviour after errors during operation  
