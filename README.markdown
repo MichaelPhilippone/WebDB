@@ -3,6 +3,7 @@ WebDB
 **AUTHOR**: Michael Philippone
 
 **DATE**: 2011-01-17
+##### updated 2011-02-21
 
 **PURPOSE**:  Provide a unified, SQL-like, OOP interface to the Client-side SQLite DB that is exposed by modern browsers
 
