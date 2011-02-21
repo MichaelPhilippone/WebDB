@@ -27,7 +27,7 @@ OR
 $DB( [params] )  
 OR  
 CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties it to a SQLite DB instance
-	* **Parameters object may contain**:
+	* **params object may contain**:
 	*	name				=>	[REQUIRED] name to assign to the Database instance
 	*	description	=>	[REQUIRED] brief description of the database's purpose
 	*	size				=>	[REQUIRED] size (in Mb) to allocate for the db
@@ -47,27 +47,27 @@ CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties
 		ie: { 'name':'text' , 'Birthday':'DATETIME' }
 
 *	DROP_TABLE( params ) => DROP a specified table
-	* **Parameters object may contain**:
+	* **params object may contain**:
 	* table 		=> 	[REQUIRED] table name to drop
 	* onSuccess	=>	[optional] optional override for global DB-success handler
 	* onError		=>	[optional] optional override for global DB-error handler
 
 *	INSERT( params ) => inserts values into a table
-	* **Parameters object may contain**:
+	* **params object may contain**:
 	* table	 		=>  [REQUIRED] table into which we want to insert values
 	* columns 	=>  [REQUIRED] array of names of columns
 	* values 		=>  [REQUIRED] array of values to insert into columns (corresponds to 'columns' property)
 	* onSuccess	=>	[optional] optional override for global DB-success handler
 	* onError		=>	[optional] optional override for global DB-error handler
 
-*	SELECT_ALL( params ) => return all rows for a given table:
-	* **Parameters object may contain**:
+*	SELECT_ALL( params ) => return all rows in a given table:
+	* **params object may contain**:
 	* table     =>  [REQUIRED] table we are querying for values
 	* onSuccess	=>	[optional] optional override for global DB-success handler
 	* onError		=>	[optional] optional override for global DB-error handler
 
 *	DROP_DATABASE( params ) => drops all tables for the WebDB instance:
-	* **Parameters object may contain**:
+	* **params object may contain**:
 	* onSuccess	=>	[optional] optional override for global DB-success handler
 	* onError		=>	[optional] optional override for global DB-error handler
 
@@ -75,19 +75,19 @@ CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties
 ## UNDER CONSTRUCTION
 
 *	SELECT( params ) => return rows as specified by the params:
-	* **Parameters object may contain**:
+	* **params object may contain**:
 	* STILL IN DEVELOPMENT
 
 *	UPDATE( params ) => update rows specified by the params:
-	* **Parameters object may contain**:
+	* **params object may contain**:
 	* STILL IN DEVELOPMENT
 
 *	DELETE( params ) => update rows specified by the params:
-	* **Parameters object may contain**:
+	* **params object may contain**:
 	* STILL IN DEVELOPMENT
 
 *	DELETE_ALL( params ) => delete ALL rows for table specified by the params:
-	* **Parameters object may contain**:
+	* **params object may contain**:
 	* STILL IN DEVELOPMENT
 
 
