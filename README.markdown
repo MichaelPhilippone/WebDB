@@ -33,11 +33,11 @@ CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties
 		*	size				=>	[REQUIRED] size (in Mb) to allocate for the db
 		*	version			=>	[REQUIRED] developer defined value of the DB version (to assist in live vs offline versioning)
 		*	onSuccess		=>	[optional] hander/callback for default behaviour after successful queries  
-(**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)  
-*only available when calling a constructor or* **init()**
-	*	onError			=>	[optional] hander/callback for default behaviour after errors during operation  
-(**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)  
-*only available when calling a constructor or* **init()**
+			(**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)  
+			*only available when calling a constructor or* **init()**
+		*	onError			=>	[optional] hander/callback for default behaviour after errors during operation  
+			(**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)  
+			*only available when calling a constructor or* **init()**
 
 *	CREATE_TABLE( [params] )  => create a table according to parameters  
 *NOTE*: since WebDB is all about simplicity, don't worry about specifying PRIMARY KEY or Last-modified columns, WebDB takes care of them for you :-)
