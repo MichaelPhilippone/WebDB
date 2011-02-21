@@ -42,52 +42,52 @@ CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties
 *	CREATE_TABLE( [params] )  => create a table according to parameters  
 *NOTE*: since WebDB is all about simplicity, don't worry about specifying PRIMARY KEY or Last-modified columns, WebDB takes care of them for you :-)
 	* **Parameters object may contain**:
-	* table		=>	[REQUIRED] name of table to create
-	* columns	=>  [REQUIRED] object containing mappings of column names and column data-types  
-		ie: { 'name':'text' , 'Birthday':'DATETIME' }
+		* table		=>	[REQUIRED] name of table to create
+		* columns	=>  [REQUIRED] object containing mappings of column names and column data-types  
+			ie: { 'name':'text' , 'Birthday':'DATETIME' }
 
 *	DROP_TABLE( params ) => DROP a specified table
 	* **params object may contain**:
-	* table 		=> 	[REQUIRED] table name to drop
-	* onSuccess	=>	[optional] optional override for global DB-success handler
-	* onError		=>	[optional] optional override for global DB-error handler
+		* table 		=> 	[REQUIRED] table name to drop
+		* onSuccess	=>	[optional] optional override for global DB-success handler
+		* onError		=>	[optional] optional override for global DB-error handler
 
 *	INSERT( params ) => inserts values into a table
 	* **params object may contain**:
-	* table	 		=>  [REQUIRED] table into which we want to insert values
-	* columns 	=>  [REQUIRED] array of names of columns
-	* values 		=>  [REQUIRED] array of values to insert into columns (corresponds to 'columns' property)
-	* onSuccess	=>	[optional] optional override for global DB-success handler
-	* onError		=>	[optional] optional override for global DB-error handler
+		* table	 		=>  [REQUIRED] table into which we want to insert values
+		* columns 	=>  [REQUIRED] array of names of columns
+		* values 		=>  [REQUIRED] array of values to insert into columns (corresponds to 'columns' property)
+		* onSuccess	=>	[optional] optional override for global DB-success handler
+		* onError		=>	[optional] optional override for global DB-error handler
 
 *	SELECT_ALL( params ) => return all rows in a given table:
 	* **params object may contain**:
-	* table     =>  [REQUIRED] table we are querying for values
-	* onSuccess	=>	[optional] optional override for global DB-success handler
-	* onError		=>	[optional] optional override for global DB-error handler
+		* table     =>  [REQUIRED] table we are querying for values
+		* onSuccess	=>	[optional] optional override for global DB-success handler
+		* onError		=>	[optional] optional override for global DB-error handler
 
 *	DROP_DATABASE( params ) => drops all tables for the WebDB instance:
 	* **params object may contain**:
-	* onSuccess	=>	[optional] optional override for global DB-success handler
-	* onError		=>	[optional] optional override for global DB-error handler
-
+		* onSuccess	=>	[optional] optional override for global DB-success handler
+		* onError		=>	[optional] optional override for global DB-error handler
+	
 -------------------------------------
 ## UNDER CONSTRUCTION
 
 *	SELECT( params ) => return rows as specified by the params:
 	* **params object may contain**:
-	* STILL IN DEVELOPMENT
+		* STILL IN DEVELOPMENT
 
 *	UPDATE( params ) => update rows specified by the params:
 	* **params object may contain**:
-	* STILL IN DEVELOPMENT
+		* STILL IN DEVELOPMENT
 
 *	DELETE( params ) => update rows specified by the params:
 	* **params object may contain**:
-	* STILL IN DEVELOPMENT
+		* STILL IN DEVELOPMENT
 
 *	DELETE_ALL( params ) => delete ALL rows for table specified by the params:
 	* **params object may contain**:
-	* STILL IN DEVELOPMENT
+		* STILL IN DEVELOPMENT
 
 
