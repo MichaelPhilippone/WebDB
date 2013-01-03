@@ -15,7 +15,7 @@ WebDB
 	</script>
 
 **NOTE**: if no 'params' object is specified, the entire installation defaults to a schema for a To-Do list manager :)  
-(unless the params are otherwise noted to be [REQUIRED] in the reference section below)
+(unless the params are otherwise noted to be <span style="color:red">[REQUIRED]</span> in the reference section below)
 
 
 REFERENCE:  
@@ -28,48 +28,48 @@ $DB( [params] )
 OR  
 CREATE_DATABASE( [params] ) ==> initalizes an instance of the DB object and ties it to a SQLite DB instance
 	* **params object may contain**:
-		*	name				=>	[REQUIRED] name to assign to the Database instance
-		*	description	=>	[REQUIRED] brief description of the database's purpose
-		*	size				=>	[REQUIRED] size (in Mb) to allocate for the db
-		*	version			=>	[REQUIRED] developer defined value of the DB version (to assist in live vs offline versioning)
-		*	onSuccess		=>	[optional] hander/callback for default behaviour after successful queries  
+		*	name				=>	<span style="color:red">[REQUIRED]</span> name to assign to the Database instance
+		*	description	=>	<span style="color:red">[REQUIRED]</span> brief description of the database's purpose
+		*	size				=>	<span style="color:red">[REQUIRED]</span> size (in Mb) to allocate for the db
+		*	version			=>	<span style="color:red">[REQUIRED]</span> developer defined value of the DB version (to assist in live vs offline versioning)
+		*	onSuccess		=>	<span style="color:blue">[optional]</span> hander/callback for default behaviour after successful queries  
 			(**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)  
 			*only available when calling a constructor or* **init()**
-		*	onError			=>	[optional] hander/callback for default behaviour after errors during operation  
+		*	onError			=>	<span style="color:blue">[optional]</span> hander/callback for default behaviour after errors during operation  
 			(**NOTE**: there is a default handler suppplied, but you REALLY SHOULD specify your own to replace it)  
 			*only available when calling a constructor or* **init()**
 
 *	CREATE_TABLE( [params] )  => create a table according to parameters  
 *NOTE*: since WebDB is all about simplicity, don't worry about specifying PRIMARY KEY or Last-modified columns, WebDB takes care of them for you :-)
 	* **Parameters object may contain**:
-		* table		=>	[REQUIRED] name of table to create
-		* columns	=>  [REQUIRED] object containing mappings of column names and column data-types  
+		* table		=>	<span style="color:red">[REQUIRED]</span> name of table to create
+		* columns	=>  <span style="color:red">[REQUIRED]</span> object containing mappings of column names and column data-types  
 			ie: { 'name':'text' , 'Birthday':'DATETIME' }
 
 *	DROP_TABLE( params ) => DROP a specified table
 	* **params object may contain**:
-		* table 		=> 	[REQUIRED] table name to drop
-		* onSuccess	=>	[optional] optional override for global DB-success handler
-		* onError		=>	[optional] optional override for global DB-error handler
+		* table 		=> 	<span style="color:red">[REQUIRED]</span> table name to drop
+		* onSuccess	=>	<span style="color:blue">[optional]</span> optional override for global DB-success handler
+		* onError		=>	<span style="color:blue">[optional]</span> optional override for global DB-error handler
 
 *	INSERT( params ) => inserts values into a table
 	* **params object may contain**:
-		* table	 		=>  [REQUIRED] table into which we want to insert values
-		* columns 	=>  [REQUIRED] array of names of columns
-		* values 		=>  [REQUIRED] array of values to insert into columns (corresponds to 'columns' property)
-		* onSuccess	=>	[optional] optional override for global DB-success handler
-		* onError		=>	[optional] optional override for global DB-error handler
+		* table	 		=>  <span style="color:red">[REQUIRED]</span> table into which we want to insert values
+		* columns 	=>  <span style="color:red">[REQUIRED]</span> array of names of columns
+		* values 		=>  <span style="color:red">[REQUIRED]</span> array of values to insert into columns (corresponds to 'columns' property)
+		* onSuccess	=>	<span style="color:blue">[optional]</span> optional override for global DB-success handler
+		* onError		=>	<span style="color:blue">[optional]</span> optional override for global DB-error handler
 
 *	SELECT_ALL( params ) => return all rows in a given table:
 	* **params object may contain**:
-		* table     =>  [REQUIRED] table we are querying for values
-		* onSuccess	=>	[optional] optional override for global DB-success handler
-		* onError		=>	[optional] optional override for global DB-error handler
+		* table     =>  <span style="color:red">[REQUIRED]</span> table we are querying for values
+		* onSuccess	=>	<span style="color:blue">[optional]</span> optional override for global DB-success handler
+		* onError		=>	<span style="color:blue">[optional]</span> optional override for global DB-error handler
 
 *	DROP_DATABASE( params ) => drops all tables for the WebDB instance:
 	* **params object may contain**:
-		* onSuccess	=>	[optional] optional override for global DB-success handler
-		* onError		=>	[optional] optional override for global DB-error handler
+		* onSuccess	=>	<span style="color:blue">[optional]</span> optional override for global DB-success handler
+		* onError		=>	<span style="color:blue">[optional]</span> optional override for global DB-error handler
 	
 -------------------------------------
 ## UNDER CONSTRUCTION

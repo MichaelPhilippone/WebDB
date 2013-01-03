@@ -31,7 +31,7 @@
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* Sandbox it! */
-(function( window, undefined ) {	
+(function( window , undefined ) {	
 	
 	window.WebDB_VERSION = "0.1";
 	window.WebDB_HideErrors = false;
@@ -118,12 +118,9 @@
 			/** [constructor] wrapper for CREATE_DATABASE */
 			, init: function(params)	{
 					var self = this;
-					
 					self.onSuccess		= !!params && params.onSuccess 		|| self.onSuccess;
 					self.onError			= !!params && params.onError 			|| self.onError;
-					
 					self.tables = [];
-					
 					return self.CREATE_DATABASE( params );
 			}
 			
@@ -131,31 +128,24 @@
 			, CREATE_DATABASE : function(params) {
 					var self = this;	
 					if( !!!params ) console.log('NOTE: No options given to CREATE_DATABASE, using DEFAULT options');
-					
 					// assign defaults:
 					self.name 				= !!params && !!params.name && params.name 								|| defaults.DBNAME;
 					self.description 	= !!params && !!params.description && params.description 	|| defaults.DBDESCRIPTION;
 					self.version 			= !!params && !!params.version && params.version 					|| defaults.DBVERSION;
 					self.size 				= !!params && !!params.size && params.size 								|| defaults.DBSIZE;
-					
 					self.db = openDatabase( self.name , self.version , self.description , self.size )
-
 					return self;
 			}	
 				
 			/** since W3C API does not provide this, we'll pproximate it here: */
 			, DROP_DATABASE: function(params){
-				var self = this;
-					
+				var self = this;					
 				var success = !!params && params.onSuccess 	|| self.onSuccess;
 				var error = !!params && params.onError 			|| self.onError;
-					
 				// build up the query string from the given parameters:
-				
 				self.log_sql(sql,'DROP_DATABASE');
 				for( var i=0,table = self.tables[i]; i < self.tables.length; i++ )
 					self.DROP_TABLE({	table: table , onSuccess: success , onError: error });
-
 				self.tables=[];
 			}
 			
@@ -286,21 +276,16 @@
 			/** DELETE a row from a table according to specified parameters: */
 			, DELETE : function(params) {
 					var self = this;
-
 					if( !!!params ) {
 						console.error('ERROR: [DELETE] No options given');
 						return -1;
 					}
-
 					var column = !!params && params.column ;
 					var table	= !!params && params.table;
 					var value = !!params && params.value;
 					var success	= !!params && params.onSuccess	|| self.onSucces;
 					var error 	= !!params && params.onError 		|| self.onError;
-					
-					
 					self.log_sql(sql,'DELETE');
-					
 					self.db.transaction(function(tx) { 
 						tx.executeSql(
 							'DELETE FROM '+table+' WHERE '+column+'=?'
@@ -309,19 +294,16 @@
 							, error);
 						});
 			}
-			
-		}; // end prototype definition
+		};
 		
-		// Map over WebDB in case of overwrite
+		/* Map over WebDB in case of overwrite */
 		_WebDB = window.WebDB;
-		// Map over the $DB in case of overwrite
+		/* Map over the $DB in case of overwrite */
 		_$DB = window.$DB;
-		// Give the init function the WebDB prototype for later instantiation
+		/* Give the init function the WebDB prototype for later instantiation */
 		WDB.fn.init.prototype = WDB.fn;
-			
-		// expose WebDB object to global namespace
+		/* expose WebDB object to global namespace */
 		return (window.WebDB =  window.$DB = WDB);	
-		
-	})(); // end WebDB anon scope
+	})(); /* end WebDB anon scope */
 
-})(window); // end outermost anon scope
+})(window); /* end outermost anon scope */
